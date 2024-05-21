@@ -1,3 +1,4 @@
+import Navbar from "~/components/Navbar/Navbar";
 import type { MetaFunction } from "@remix-run/cloudflare";
 
 export const meta: MetaFunction = () => {
@@ -12,9 +13,8 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div>
-      <h1>Study Room</h1>
-      <p>Welcome to Study Room!</p>
+    <div className="min-h-screen bg-neutral-950 text-emerald-500">
+      <Navbar />
     </div>
   );
 }
