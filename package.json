@@ -16,6 +16,7 @@
     "@clerk/remix": "^4.0.10",
     "@clerk/themes": "^2.1.6",
     "@fontsource/inter": "^5.0.18",
+    "@libsql/client": "^0.6.0",
     "@remix-run/cloudflare": "^2.9.2",
     "@remix-run/cloudflare-pages": "^2.9.2",
     "@remix-run/react": "^2.9.2",
