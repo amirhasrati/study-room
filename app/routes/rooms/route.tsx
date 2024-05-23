@@ -2,7 +2,7 @@ import { getAuth } from "@clerk/remix/ssr.server";
 import type { ActionFunction, LoaderFunction } from "@remix-run/cloudflare";
 import { redirect } from "@remix-run/cloudflare";
 
-import Navbar from "~/components/Navbar/Navbar";
+import Navbar from "~/components/Navbar/Navbar/Navbar";
 import { RoomCard } from "./roomCard";
 import { useState } from "react";
 import { Form } from "@remix-run/react";
@@ -60,7 +60,7 @@ export default function Rooms() {
                 </div>
                 <div className="flex justify-center w-screen min-h-[calc(100vh-4rem)]">
                     <div className="py-16 w-1/6 flex flex-col items-center">
-                        <button type="button" onClick={toggleNewRoomModal} className="w-fit border border-emerald-900 text-lg rounded-md py-2 px-4">
+                        <button type="button" onClick={toggleNewRoomModal} className="hidden md:block fixed bottom-10 w-fit border border-emerald-900 text-lg rounded-md py-2 px-4">
                             New Room
                         </button>
                     </div>
@@ -75,7 +75,7 @@ export default function Rooms() {
 
             {/* New Room Modal */}
             {isNewRoomModalOpen && (
-                <div className="flex flex-col absolute top-0">
+                <div className="flex flex-col">
                     <Form method="post">
                         <input name="roomName" type="text" placeholder="Room Name" />
                         <button type="submit">Create Room</button>
