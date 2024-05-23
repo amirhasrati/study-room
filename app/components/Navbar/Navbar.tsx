@@ -8,11 +8,11 @@ import {
 } from "@clerk/remix";
 export default function Navbar() {
   return (
-    <nav className="h-16 px-8 border-b border-neutral-900 text-white flex items-center justify-between">
+    <nav className="h-16 px-8 border-b border-emerald-950 text-white flex items-center justify-between">
       <div className="flex gap-4">
         <NavBtn title="Home" href="/" />
         <SignedIn>
-          <NavBtn title="Rooms" href="/" />
+          <NavBtn title="Rooms" href="/rooms" />
         </SignedIn>
       </div>
       <SignedIn>
@@ -22,7 +22,7 @@ export default function Navbar() {
       </SignedIn>
       <SignedOut>
         <SignInButton>
-          <button>Login</button>
+          <p>Login</p>
         </SignInButton>
       </SignedOut>
     </nav>
