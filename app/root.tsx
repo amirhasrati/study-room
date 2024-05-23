@@ -8,7 +8,7 @@ import "@fontsource/inter/700.css";
 import "@fontsource/inter/800.css";
 import "@fontsource/inter/900.css";
 
-import type { LinksFunction, MetaFunction, LoaderFunctionArgs } from "@remix-run/cloudflare";
+import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 
 import { rootAuthLoader } from "@clerk/remix/ssr.server";
@@ -37,7 +37,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Meta />
                 <Links />
             </head>
-            <body className="font-sans">
+            <body className="font-sans overscroll-none">
                 {children}
                 <ScrollRestoration />
                 <Scripts />
